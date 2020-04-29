@@ -9,7 +9,16 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="530,375,0,0" Text="{x:Bind ViewModel.Student.Navn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="125" Width="139"/>
+        <TextBox HorizontalAlignment="Left" Margin="10,0,0,0" Text="{x:Bind ViewModel.Student.Navn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Center" Height="125" Width="139"/>
+        <ListView ItemsSource="{x:Bind ViewModelKlassRum.OC_Klasserum}"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:KlasseRum">
+                    <TextBlock Text="{x:Bind Navn}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </Page>

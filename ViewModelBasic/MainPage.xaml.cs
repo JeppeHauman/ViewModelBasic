@@ -23,10 +23,13 @@ namespace ViewModelBasic
     public sealed partial class MainPage : Page
     {
         public StudentViewModel ViewModel { get; set; }
+
+        public KlasseRumViewModel ViewModelKlassRum { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
             ViewModel = new StudentViewModel();
+            ViewModelKlassRum = new KlasseRumViewModel();
         }
     }
 }
