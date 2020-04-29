@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="530,375,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="530,375,0,0" Text="{x:Bind ViewModel.Student.Navn, Mode=TwoWay}" TextWrapping="Wrap" VerticalAlignment="Top" Height="125" Width="139"/>
 
     </Grid>
 </Page>
